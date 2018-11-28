@@ -14,3 +14,5 @@ const logPageView = (location) => {
     }
     return mParticle.logPageView(location.pathname);
 }
+
+export default logPageView;

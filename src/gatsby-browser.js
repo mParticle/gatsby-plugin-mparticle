@@ -1,6 +1,7 @@
+import logPageView from './index';
 
 export const onRouteUpdate = ({ location }, options) => {
     if (options.logPageViews) {
-        return mParticle.logPageView(location.pathname);
+        return logPageView(location);
     }
 }

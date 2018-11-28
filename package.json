@@ -1,7 +1,7 @@
 {
   "name": "@mparticle/gatsby-plugin-mparticle",
   "description": "Gatsby plugin to add mParticle to a site",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "gatsby-ssr.js",
   "author": "Danny Hendrix <dhendrix@mparticle.com>",
   "license": "MIT",

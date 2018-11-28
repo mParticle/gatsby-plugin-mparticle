@@ -11,7 +11,7 @@ module.exports = {
   plugins: [
     // Other plugins here...
     {
-      resolve: 'gatsby-plugin-mparticle',
+      resolve: '@mparticle/gatsby-plugin-mparticle',
       options: {
         apiKey: 'YOUR APP KEY',
         logPageViews: true or false,

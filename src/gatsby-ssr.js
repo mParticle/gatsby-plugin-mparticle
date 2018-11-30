@@ -3,7 +3,7 @@ import React from "react"
 export const onRenderBody = (
     { setHeadComponents }, pluginOptions
 ) => {
-    const key = pluginOptions.apiKey;
+    const { apiKey, config } = pluginOptions;
     return setHeadComponents([
         <script
             key={`gatsby-plugin-mparticle`}
@@ -13,10 +13,7 @@ export const onRenderBody = (
                     window.mParticle.eCommerce = { Cart: {} };
                 
                     window.mParticle.Identity = {};
-                    window.mParticle.config = window.mParticle.config || {
-                    isDevelopmentMode: true,
-                    useCookieStorage: true,
-                    };
+                    window.mParticle.config = window.mParticle.config || ${JSON.stringify(config)};
                     window.mParticle.config.rq = [];
                     window.mParticle.ready = function (f) {
                         window.mParticle.config.rq.push(f);
@@ -29,7 +26,7 @@ export const onRenderBody = (
                     mp.src = ('https:' == document.location.protocol ? 'https://jssdkcdns' : 'http://jssdkcdn') + '.mparticle.com/js/v2/' + apiKey + '/mparticle.js';
                     var s = document.getElementsByTagName('script')[0];
                     s.parentNode.insertBefore(mp, s);
-                })('${key}')`,
+                })('${apiKey}')`,
             }}
         />,
     ]);

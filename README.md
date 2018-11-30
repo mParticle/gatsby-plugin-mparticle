@@ -15,6 +15,9 @@ module.exports = {
       options: {
         apiKey: 'YOUR APP KEY',
         logPageViews: true or false,
+        config: {
+          'Your mParticle config object here, if needed e.g. isDevelopmentMode',
+        },
       }
     }
   ]
